@@ -16,7 +16,7 @@ public class Auxiliar extends Entity<AuxiliarId> {
         this.disponibilidad = new Disponibilidad(Disponibilidad.Disponible.DISPONIBLE);
     }
 
-    public Disponibilidad Disponibilidad() {
+    public Disponibilidad disponibilidad() {
         return disponibilidad;
     }
 }
