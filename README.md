@@ -2,5 +2,5 @@
 
 Colaboradores:
 
-Luis Camilo Monje Perdomo
+Luis Camilo Monje Perdomo - 
 Wilton Henao Mazo
