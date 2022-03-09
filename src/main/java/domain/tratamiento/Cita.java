@@ -1,7 +1,7 @@
-package tratamiento;
+package domain.tratamiento;
 
 import co.com.sofka.domain.generic.Entity;
-import tratamiento.valueobject.*;
+import domain.tratamiento.valueobject.*;
 
 public class Cita extends Entity<CitaId> {
     private Fecha fecha;
@@ -13,6 +13,14 @@ public class Cita extends Entity<CitaId> {
         super(citaId);
         this.fecha = new Fecha();
         this.hora = new Hora();
+        this.factura = new Factura();
+        this.estado = new Estado(Estado.Fase.PENDIENTE);
+    }
+
+    public Cita(CitaId entityId, Fecha fecha, Hora hora) {
+        super(entityId);
+        this.fecha = fecha;
+        this.hora = hora;
         this.factura = new Factura();
         this.estado = new Estado(Estado.Fase.PENDIENTE);
     }

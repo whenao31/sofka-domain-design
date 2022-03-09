@@ -1,4 +1,4 @@
-package tratamiento.valueobject;
+package domain.tratamiento.valueobject;
 
 import co.com.sofka.domain.generic.ValueObject;
 

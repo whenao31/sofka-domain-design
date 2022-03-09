@@ -1,8 +1,7 @@
-package tratamiento.valueobject;
+package domain.tratamiento.valueobject;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Factura implements ValueObject<Factura.Props> {
