@@ -3,10 +3,10 @@ package domain.odontologo.event;
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.odontologo.valor.AuxiliarId;
 
-public class CambiarDisponibilidadDelAuxiliar extends DomainEvent {
+public class DisponibilidadDelAuxiliarCambiada extends DomainEvent {
     private final AuxiliarId auxiliarId;
 
-    public CambiarDisponibilidadDelAuxiliar(AuxiliarId auxiliarId) {
+    public DisponibilidadDelAuxiliarCambiada(AuxiliarId auxiliarId) {
         super("odontologo.cambiardisponibilidaddelauxiliar");
         this.auxiliarId = auxiliarId;
     }

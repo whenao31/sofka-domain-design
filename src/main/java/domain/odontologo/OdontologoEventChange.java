@@ -1,10 +1,8 @@
 package domain.odontologo;
 
 import co.com.sofka.domain.generic.EventChange;
-import domain.odontologo.event.AsistenteAdicionado;
-import domain.odontologo.event.CambiarDisponibilidadDelAuxiliar;
-import domain.odontologo.event.EspecialidadAdicionada;
-import domain.odontologo.event.OdontologoCreado;
+import domain.odontologo.event.*;
+import domain.odontologo.valor.AuxiliarId;
 
 import java.util.ArrayList;
 
@@ -12,22 +10,28 @@ public class OdontologoEventChange extends EventChange {
     public OdontologoEventChange(Odontologo odontologo) {
 
         apply((OdontologoCreado event) -> {
-            odontologo.auxiliarId = event.getAuxiliarId();
+            odontologo.auxiliar = new Auxiliar(new AuxiliarId());
             odontologo.especialidades = new ArrayList<>();
         });
 
-        apply((AsistenteAdicionado event) ->{
-
-        });
-
         apply((EspecialidadAdicionada event) -> {
-           odontologo.especialidades.add(new Especialidad(event.getEspecialidadId(),event.getTipo(),event.getDescripcion()));
+           odontologo.especialidades
+                   .add(new Especialidad(event.getEspecialidadId(),event.getTipo(),event.getDescripcion()));
         });
 
-        apply((CambiarDisponibilidadDelAuxiliar event) ->{
-            odontologo.auxiliarId
+        apply((DisponibilidadDelAuxiliarCambiada event) -> {
+            odontologo.auxiliar.cambiarDisponibilidad();
         });
 
+        apply((DescripciónEspecialidadCambiada event) -> {
+            odontologo.especialidades.get(Integer.parseInt(event.getEspecialidadId().value()))
+                    .cambiarDescripcion(event.getDescripcion());
+        });
+
+        apply((TipoEspecialidadModificada event) -> {
+            odontologo.especialidades.get(Integer.parseInt(event.getEspecialidadId().value()))
+                    .modificarTipo(event.getTipo());
+        });
 
     }
 }
