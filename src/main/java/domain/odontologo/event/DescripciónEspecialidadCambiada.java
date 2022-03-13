@@ -10,7 +10,7 @@ public class DescripciónEspecialidadCambiada extends DomainEvent {
 
 
     public DescripciónEspecialidadCambiada(EspecialidadId especialidadId, Descripcion descripcion) {
-        super("odontologo.cambiardescripciondeespecialidad");
+        super("odontologo.descripcionespecialidadcambiada");
         this.especialidadId = especialidadId;
         this.descripcion = descripcion;
     }

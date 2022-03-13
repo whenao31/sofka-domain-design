@@ -27,7 +27,7 @@ public class Tratamiento extends AggregateEvent<TratamientoId> {
         subscribe(new TratamientoEventChange(this));
     }
 
-    private static Tratamiento from(TratamientoId tratamientoId, List<DomainEvent> events){
+    public static Tratamiento from(TratamientoId tratamientoId, List<DomainEvent> events){
         var tratamiento = new Tratamiento(tratamientoId);
         events.forEach(tratamiento::applyEvent);
         return tratamiento;
@@ -37,8 +37,8 @@ public class Tratamiento extends AggregateEvent<TratamientoId> {
         appendChange(new CitaCreada(citaId, fecha, hora));
     }
 
-    public void confirmarCita(CitaId citaId){
-        appendChange(new CitaConfirmada(citaId)).apply();
+    public void confirmarCita(CitaId citaId, Estado estado){
+        appendChange(new CitaConfirmada(citaId, estado)).apply();
     }
 
     public void cancelarCita(CitaId citaId){
