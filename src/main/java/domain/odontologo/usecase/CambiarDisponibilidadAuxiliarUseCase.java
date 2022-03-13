@@ -1,4 +1,4 @@
-package domain.odontologo.usecases;
+package domain.odontologo.usecase;
 
 import co.com.sofka.business.generic.BusinessException;
 import co.com.sofka.business.generic.UseCase;

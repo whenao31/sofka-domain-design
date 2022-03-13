@@ -1,4 +1,4 @@
-package domain.odontologo.usecases;
+package domain.odontologo.usecase;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
@@ -9,8 +9,6 @@ import domain.odontologo.valor.AuxiliarId;
 import domain.odontologo.valor.OdontologoId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrearOdontologoUseCaseTest {
     @Test

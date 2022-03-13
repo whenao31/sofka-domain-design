@@ -1,11 +1,10 @@
-package domain.odontologo.usecases;
+package domain.odontologo.usecase;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.odontologo.Auxiliar;
-import domain.odontologo.Odontologo;
 import domain.odontologo.comand.CambiarDisponibilidadAuxiliar;
 import domain.odontologo.event.DisponibilidadDelAuxiliarCambiada;
 import domain.odontologo.event.OdontologoCreado;
@@ -19,10 +18,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.EventListener;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class CambiarDisponibilidadAuxiliarUseCaseTest {
