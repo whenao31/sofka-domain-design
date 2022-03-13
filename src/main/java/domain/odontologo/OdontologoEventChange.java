@@ -20,7 +20,7 @@ public class OdontologoEventChange extends EventChange {
         });
 
         apply((DisponibilidadDelAuxiliarCambiada event) -> {
-            odontologo.auxiliar.cambiarDisponibilidad();
+            odontologo.auxiliar.cambiarDisponibilidad(event.getDisponible());
         });
 
         apply((DescripciónEspecialidadCambiada event) -> {
