@@ -49,7 +49,6 @@ public class Tratamiento extends AggregateEvent<TratamientoId> {
         appendChange(new CotizacionCreada(cotizacionId, costo, dientes)).apply();
     }
 
-
     public void adicionarDiente(Diente diente ){
         appendChange(new DienteAdicionado(diente)).apply();
     }
@@ -60,5 +59,17 @@ public class Tratamiento extends AggregateEvent<TratamientoId> {
 
     public Map<String, Cita> citas(){
         return citas;
+    }
+
+    public PacienteId pacienteId() {
+        return pacienteId;
+    }
+
+    public OdontologoId odontologoId() {
+        return odontologoId;
+    }
+
+    public Cotizacion cotizacion() {
+        return cotizacion;
     }
 }
