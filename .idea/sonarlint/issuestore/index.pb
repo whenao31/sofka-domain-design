@@ -17,9 +17,5 @@ _
 /src/main/java/domain/odontologo/Odontologo.java,6/5/65f6480c43d9548131601afb8fb81678a5bef5f7
 i
 9src/main/java/domain/tratamiento/event/CitaCancelada.java,2/0/2066ae60ec39d3906943f026ae7ed4185c40b0b5
-k
-;src/main/java/domain/tratamiento/event/CostoModificado.java,8/0/80dc2256e690544c3d8ab5ad8776fd7ac5841279
-Z
-*src/main/java/domain/tratamiento/Cita.java,0/a/0a2e066b31d27103023c146091e596477e8e4c55
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
